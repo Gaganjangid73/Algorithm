@@ -1,5 +1,5 @@
 import './footer.css';
-import { TiLocationArrow } from "react-icons/ti";
+import { LuArrowUpRight } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -61,25 +61,44 @@ function Footer() {
         ))}
       </div>
   
-    <div className="xlrterms">
-          <p className='xlrcallbook'>want to talk to me one on one? Book a phone call <span> <TiLocationArrow size={16} /> </span> </p>
-           <div className='xlr-social'>
-              <FaInstagram />
-              <FaXTwitter />
-              <FaLinkedin />
-              <PiMediumLogoFill />
-           </div>
-           <div className='xlrpolicypage'>
-            <ul>
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
-                <li>Refund Policy</li>
-                <li>Cancellation Policy</li>
-            </ul>
-           </div>
-            <p className='xlrcopywrite'>© {new Date().getFullYear()} AlgorithmXlr8.io. All rights reserved.</p>
-    </div>
-   
+      <div className="xlrterms">
+        <a href="#book-call" className="xlrcallbook">
+          Want to talk to me one on one? Book a phone call
+          <LuArrowUpRight className="xlrcall-arrow" size={15} />
+        </a>
+
+        <div className="xlr-social">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="xlr-social-btn">
+            <FaInstagram />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="X (Twitter)" className="xlr-social-btn">
+            <FaXTwitter />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="xlr-social-btn">
+            <FaLinkedin />
+          </a>
+          <a href="https://medium.com" target="_blank" rel="noreferrer" aria-label="Medium" className="xlr-social-btn">
+            <PiMediumLogoFill />
+          </a>
+        </div>
+
+        <div className="xlrpolicypage">
+          <a href="#privacy">Privacy Policy</a>
+          <span className="xlr-dot">·</span>
+          <a href="#terms">Terms & Conditions</a>
+          <span className="xlr-dot">·</span>
+          <a href="#refund">Refund Policy</a>
+          <span className="xlr-dot">·</span>
+          <a href="#cancellation">Cancellation Policy</a>
+        </div>
+
+        <p className="xlrcopywrite">© {new Date().getFullYear()} AlgorithmXlr8.io. All rights reserved.</p>
+
+        {/* Large Subtle Background Watermark Text */}
+        <div className="xlr-watermark" aria-hidden="true">
+          AlgorithmXlr8
+        </div>
+      </div>
     </footer>
   );
 }

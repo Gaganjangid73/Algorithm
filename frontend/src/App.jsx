@@ -1,11 +1,9 @@
-import Header from './layouts/header/header.jsx';
-import Footer from './layouts/footer/footer.jsx'
-
+import Apptitude from "./pages/apptitudehomepage";
 function App() {
   return (
     <div>
-      <Header />
-      <Footer/>
+ 
+     <Apptitude/>   
     </div>
   );
 }

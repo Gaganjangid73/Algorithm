@@ -44,17 +44,169 @@
   --tracking-normal: 0em;
   --tracking-wide: 0.05em;
 
-  /* --- Spacing Scale --- */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
+  /* ==========================================================================
+     SPACING, MARGIN & PADDING SCALE (Comprehensive System)
+     ========================================================================== */
+
+  /* --- Base Spacing Units (0 to 128px) --- */
+  --space-0: 0px;
+  --space-0-5: 0.125rem;  /* 2px - Hairline adjustments */
+  --space-1: 0.25rem;     /* 4px - Micro gaps, icon paddings */
+  --space-1-5: 0.375rem;  /* 6px */
+  --space-2: 0.5rem;      /* 8px - Compact gaps, tags */
+  --space-2-5: 0.625rem;  /* 10px */
+  --space-3: 0.75rem;     /* 12px - Input padding, badges */
+  --space-3-5: 0.875rem;  /* 14px */
+  --space-4: 1rem;        /* 16px - Base unit / card gap */
+  --space-5: 1.25rem;     /* 20px - Medium spacing */
+  --space-6: 1.5rem;      /* 24px - Section gap, card padding */
+  --space-7: 1.75rem;     /* 28px */
+  --space-8: 2rem;        /* 32px - Large container spacing */
+  --space-9: 2.25rem;     /* 36px */
+  --space-10: 2.5rem;     /* 40px - Header / footer gaps */
+  --space-11: 2.75rem;    /* 44px */
+  --space-12: 3rem;       /* 48px - Major section division */
+  --space-14: 3.5rem;     /* 56px */
+  --space-16: 4rem;       /* 64px - Hero & page layout blocks */
+  --space-20: 5rem;       /* 80px - Spacious desktop section breaks */
+  --space-24: 6rem;       /* 96px */
+  --space-28: 7rem;       /* 112px */
+  --space-32: 8rem;       /* 128px - Giant displays */
+
+  /* --- Padding Scales (p, px, py) --- */
+  --p-0: 0px;
+  --p-1: var(--space-1);       /* 4px */
+  --p-2: var(--space-2);       /* 8px */
+  --p-3: var(--space-3);       /* 12px */
+  --p-4: var(--space-4);       /* 16px */
+  --p-5: var(--space-5);       /* 20px */
+  --p-6: var(--space-6);       /* 24px */
+  --p-8: var(--space-8);       /* 32px */
+  --p-10: var(--space-10);     /* 40px */
+  --p-12: var(--space-12);     /* 48px */
+  --p-16: var(--space-16);     /* 64px */
+
+  /* Component Specific Padding */
+  --p-btn-sm: 0.35rem 0.75rem;
+  --p-btn-md: 0.5rem 1rem;
+  --p-btn-lg: 0.75rem 1.5rem;
+  --p-input-sm: 0.4rem 0.75rem;
+  --p-input-md: 0.6rem 1rem;
+  --p-input-lg: 0.8rem 1.25rem;
+  --p-card-sm: var(--space-4);      /* 16px */
+  --p-card-md: var(--space-6);      /* 24px */
+  --p-card-lg: var(--space-8);      /* 32px */
+  --p-badge: 0.2rem 0.55rem;
+  --p-modal: var(--space-8);
+
+  /* Page Layout Padding (Container horizontal & vertical bounds) */
+  --px-layout: var(--space-32);      /* 128px (8rem) - Double of standard 64px */
+  --px-layout-tablet: var(--space-10);/* 40px Tablet */
+  --px-layout-mobile: var(--space-4);/* 16px Mobile */
+  --py-section: var(--space-16);     /* 64px Desktop section height gap */
+  --py-section-mobile: var(--space-8);
+
+  /* --- Margin Scales (m, mx, my, mb, mt) --- */
+  --m-0: 0px;
+  --m-auto: auto;
+  --mx-auto: auto;
+  --m-1: var(--space-1);       /* 4px */
+  --m-2: var(--space-2);       /* 8px */
+  --m-3: var(--space-3);       /* 12px */
+  --m-4: var(--space-4);       /* 16px */
+  --m-5: var(--space-5);       /* 20px */
+  --m-6: var(--space-6);       /* 24px */
+  --m-8: var(--space-8);       /* 32px */
+  --m-10: var(--space-10);     /* 40px */
+  --m-12: var(--space-12);     /* 48px */
+  --m-16: var(--space-16);     /* 64px */
+  --m-20: var(--space-20);     /* 80px */
+
+  /* Common Typographic & Section Margins */
+  --mb-title: var(--space-3);       /* Bottom margin below headings */
+  --mb-subtitle: var(--space-6);    /* Bottom margin below subtitles */
+  --mb-card: var(--space-6);        /* Bottom margin between cards */
+  --mb-section: var(--space-16);    /* Bottom margin between main sections */
+  --mt-section: var(--space-16);    /* Top margin for section break */
+
+  /* Negative Margins (Bleed & Overlap Positioning) */
+  --m-neg-1: -0.25rem;  /* -4px */
+  --m-neg-2: -0.5rem;   /* -8px */
+  --m-neg-3: -0.75rem;  /* -12px */
+  --m-neg-4: -1rem;     /* -16px */
+  --m-neg-6: -1.5rem;   /* -24px */
+  --m-neg-8: -2rem;     /* -32px */
+  --m-neg-10: -2.5rem;  /* -40px */
+  --m-neg-16: -4rem;    /* -64px */
+
+  /* --- Flexbox & Grid Gaps --- */
+  --gap-0: 0px;
+  --gap-1: var(--space-1);      /* 4px */
+  --gap-2: var(--space-2);      /* 8px */
+  --gap-3: var(--space-3);      /* 12px */
+  --gap-4: var(--space-4);      /* 16px */
+  --gap-5: var(--space-5);      /* 20px */
+  --gap-6: var(--space-6);      /* 24px */
+  --gap-8: var(--space-8);      /* 32px */
+  --gap-10: var(--space-10);    /* 40px */
+  --gap-12: var(--space-12);    /* 48px */
+  --gap-16: var(--space-16);    /* 64px */
+
+  /* ==========================================================================
+     DIMENSIONS & SIZING TOKENS (Width, Height, Max-Width, Element Sizes)
+     ========================================================================== */
+
+  /* --- Max Widths (Containers & Reading Bounds) --- */
+  --max-w-xs: 20rem;        /* 320px - Popovers, mini cards */
+  --max-w-sm: 24rem;        /* 384px - Auth forms, compact widgets */
+  --max-w-md: 28rem;        /* 448px - Standard cards, dialogs */
+  --max-w-lg: 32rem;        /* 512px - Medium panels */
+  --max-w-xl: 36rem;        /* 576px - Modals, wide cards */
+  --max-w-2xl: 42rem;       /* 672px - Subtitles, hero summaries (ideal for paragraph width) */
+  --max-w-3xl: 48rem;       /* 768px - Tablet layout, centered content */
+  --max-w-4xl: 56rem;       /* 896px - Long article body */
+  --max-w-5xl: 64rem;       /* 1024px - Desktop section */
+  --max-w-6xl: 72rem;       /* 1152px - Wide dashboard */
+  --max-w-7xl: 80rem;       /* 1280px - Large container */
+  --max-w-screen: 87.5rem;  /* 1400px - Header / Footer / Layout max bounds */
+  --max-w-prose: 65ch;      /* 65 characters - Optimal ergonomic reading line length */
+
+  /* --- Width Utilities --- */
+  --w-full: 100%;
+  --w-screen: 100vw;
+  --w-sidebar: 260px;
+  --w-sidebar-collapsed: 68px;
+  --w-card-sm: 280px;
+  --w-card-md: 340px;
+  --w-card-lg: 420px;
+
+  /* --- Heights (Components & Structure) --- */
+  --header-height: 74px;
+  --h-navbar: 74px;
+  --h-btn-sm: 32px;
+  --h-btn-md: 40px;
+  --h-btn-lg: 48px;
+  --h-input-sm: 34px;
+  --h-input-md: 42px;
+  --h-input-lg: 50px;
+  --h-card-min: 180px;
+  --h-hero-min: 480px;
+
+  /* --- Viewport Heights --- */
+  --h-full: 100%;
+  --h-screen: 100vh;
+  --h-dvh: 100dvh;         /* Mobile browser dynamic viewport */
+  --h-content-screen: calc(100vh - var(--header-height)); /* Full viewport minus navbar */
+
+  /* --- Element Sizes (Width + Height for Icons, Avatars, Badges) --- */
+  --size-2xs: 1rem;         /* 16px - Micro badges, tiny icons */
+  --size-xs: 1.25rem;       /* 20px - Small icons */
+  --size-sm: 1.5rem;        /* 24px - Standard icons */
+  --size-md: 2rem;          /* 32px - Medium buttons, icon wrappers */
+  --size-lg: 2.5rem;        /* 40px - Standard avatar, logo wraps */
+  --size-xl: 3rem;          /* 48px - Feature icons, big badges */
+  --size-2xl: 4rem;         /* 64px - Large feature badges */
+  --size-3xl: 5rem;         /* 80px - Hero display graphics */
 
   /* --- Border Radius --- */
   --radius-xs: 4px;
@@ -105,6 +257,7 @@
   --code-bg: #0f1523;
   --code-text: #38bdf8;
   --navbar-bg: rgba(0, 0, 0, 0.85);
+  --footer-watermark: rgba(255, 255, 255, 0.05);
 
   /* Primary button: white button in dark mode */
   --btn-primary-bg: #ffffff;
@@ -141,6 +294,7 @@
   --code-bg: #f4f4f5;
   --code-text: #0284c7;
   --navbar-bg: rgba(255, 255, 255, 0.88);
+  --footer-watermark: rgba(0, 0, 0, 0.04);
 
   /* Primary button: black button in light mode (a white button would disappear) */
   --btn-primary-bg: #09090b;
