@@ -49,12 +49,12 @@ function AptitudeHomePage() {
           <div className="xlr-aptitude-cards-grid">
             {aptitudeTopics.map((topic) => (
               <div key={topic.id} className="xlr-apt-card">
-                {/* Animated Top Visual Stage */}
+             
                 <div className="xlr-apt-card-visual">
                   {topic.visual}
                 </div>
 
-                {/* Card Content & Meta */}
+        
                 <div className="xlr-apt-card-body">
                   <h3 className="xlr-apt-card-title">{topic.title}</h3>
                   <p className="xlr-apt-card-desc">{topic.desc}</p>
